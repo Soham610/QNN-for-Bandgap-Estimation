@@ -1,113 +1,170 @@
+Quantum-Inspired Hybrid Neural Network for Bandgap Energy Prediction
 
-# 🧠🔬 Enhanced Hybrid Neural Network for Bandgap Prediction
+Overview
 
-This project presents an **ensemble of enhanced hybrid neural networks**—inspired by quantum interference mechanisms—for accurate **bandgap energy prediction** from elemental and structural properties. The dataset is synthetically generated and augmented with polynomial and interaction features to simulate real-world scenarios.
+This project presents a Quantum-Inspired Hybrid Neural Network (QIHNN) designed to predict the bandgap energy of materials using elemental and structural properties. The model combines quantum-inspired feature transformations with classical deep learning techniques to capture complex nonlinear relationships that influence material behavior.
 
-<p align="center">
-  <img src="enhanced_bandgap_prediction.png" width="600"/>
-</p>
+Bandgap prediction plays a crucial role in materials science, semiconductor design, photovoltaic systems, and electronic device development. By leveraging advanced feature engineering and neural network architectures, this project aims to improve prediction accuracy while maintaining computational efficiency.
 
-## 🚀 Overview
+⸻
 
-Accurate prediction of bandgap energy is crucial in material science for applications like semiconductors and solar cells. This model leverages a hybrid deep learning approach mimicking **quantum-inspired layers**, combined with ensemble learning, to deliver robust regression performance.
+Problem Statement
 
----
+Determining the bandgap energy of materials through experimental methods can be costly and time-consuming. Machine learning provides an alternative approach by learning patterns from known material properties and generating accurate predictions for unseen materials.
 
-## 📁 Project Structure
+The objective of this project is to develop a hybrid neural network capable of estimating bandgap energy from material characteristics such as atomic mass, electronegativity, density, lattice constants, and valence electron information.
 
-```
-📦bandgap-predictor
- ┣ 📜main.py              # Main training and evaluation script
- ┣ 📜README.md            # This file
- ┗ 📊enhanced_bandgap_prediction.png  # Visualization of predictions
-```
+⸻
 
----
+Key Features
 
-## 🧩 Features Used
+* Quantum-inspired neural network architecture
+* Hybrid quantum-classical feature learning
+* Advanced feature engineering and interaction terms
+* Ensemble-based prediction framework
+* Automated preprocessing and normalization
+* Regression analysis with performance evaluation
+* Visualization of actual versus predicted values
 
-- `Atomic Mass`
-- `Electronegativity`
-- `Lattice Constant`
-- `Density`
-- `Valence Electrons`
-- **Engineered Features**:
-  - Electronegativity²
-  - Electronegativity × ValenceElectrons
-  - AtomicMass / Density
-  - 2nd-degree interaction terms via `PolynomialFeatures`
+⸻
 
----
+Dataset Features
 
-## 🛠️ Technologies Used
+The model utilizes material descriptors including:
 
-- Python 🐍
-- PyTorch 🔥
-- Scikit-learn 🧪
-- Matplotlib 📊
-- NumPy 🧮
+* Atomic Mass
+* Electronegativity
+* Density
+* Lattice Constant
+* Valence Electrons
 
----
+Engineered Features
 
-## 📊 Model Architecture
+* Electronegativity²
+* Electronegativity × Valence Electrons
+* Atomic Mass / Density
+* Polynomial interaction features
+* Higher-order feature combinations
 
-The hybrid model includes:
+⸻
 
-- **Quantum-inspired subnetwork** (nonlinear projections, interference layer)
-- **Classical feed-forward network** (multi-layer perceptron)
-- **Feature fusion via concatenation**
-- Dropout and Batch Normalization for regularization
-- Ensemble of 5 models for robust prediction
+Model Architecture
 
----
+The proposed architecture consists of:
 
-## 📈 Results
+Quantum-Inspired Layer
 
-- ✅ **Test MSE**: ~0.02 - 0.04  
-- ✅ **R² Score**: ~0.92 - 0.96  
-- ✅ **MAE**: ~0.10 - 0.15 eV  
+A custom nonlinear transformation layer designed to simulate quantum interference-like feature interactions and enhance representation learning.
 
-Includes MAE band and regression fit on actual vs predicted bandgap values.
+Classical Neural Network
 
----
+A fully connected deep neural network responsible for learning higher-level feature relationships and performing regression.
 
-## 📦 How to Run
+Feature Fusion
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/bandgap-predictor.git
-   cd bandgap-predictor
-   ```
+Outputs from both components are combined to create richer feature representations before final prediction.
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+Regularization Techniques
 
-3. Run the model:
-   ```bash
-   python main.py
-   ```
+* Dropout Layers
+* Batch Normalization
+* Ensemble Learning
 
-> Ensure Python 3.8+ and PyTorch are properly installed.
+These methods help improve generalization and reduce overfitting.
 
----
+⸻
 
-## 📚 Future Work
+Technology Stack
 
-- Extend to real materials datasets (e.g., Materials Project)
-- Incorporate domain knowledge into feature extraction
-- Use real quantum layers (e.g., PennyLane, Qiskit integration)
-- Hyperparameter optimization and model uncertainty quantification
+* Python
+* PyTorch
+* NumPy
+* Scikit-learn
+* Matplotlib
 
----
+⸻
 
-## 🧠 Inspiration
+Performance
 
-This work is inspired by hybrid quantum neural network research and the need for physics-informed models in materials science.
+The model demonstrates strong predictive capability for bandgap estimation with:
 
----
+* Mean Squared Error (MSE): ~0.02 – 0.04
+* Mean Absolute Error (MAE): ~0.10 – 0.15 eV
+* R² Score: ~0.92 – 0.96
 
-## 📝 License
+Performance is evaluated using standard regression metrics and visualization techniques.
 
-This project is licensed under the MIT License.
+⸻
+
+Project Structure
+
+QNN-for-Bandgap-Estimation/
+│
+├── QNN_code.py
+├── README.md
+└── Results/
+    └── Prediction_Visualization.png
+
+⸻
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/yourusername/QNN-for-Bandgap-Estimation.git
+
+Navigate to the project directory:
+
+cd QNN-for-Bandgap-Estimation
+
+Install dependencies:
+
+pip install torch numpy pandas scikit-learn matplotlib
+
+⸻
+
+Usage
+
+Run the training and evaluation script:
+
+python QNN_code.py
+
+The script will:
+
+1. Load and preprocess the dataset
+2. Generate engineered features
+3. Train the hybrid neural network
+4. Evaluate model performance
+5. Visualize prediction results
+
+⸻
+
+Applications
+
+* Semiconductor Material Discovery
+* Solar Cell Research
+* Materials Informatics
+* Electronic Device Design
+* Computational Materials Science
+
+⸻
+
+Future Enhancements
+
+* Integration with real-world materials databases
+* Hyperparameter optimization
+* Explainable AI techniques for material analysis
+* Quantum computing framework integration (PennyLane, Qiskit)
+* Deployment as a web-based prediction tool
+
+⸻
+
+Contributors
+
+Developed as part of a collaborative machine learning project focused on applying AI techniques to materials science and bandgap estimation.
+
+⸻
+
+License
+
+This project is intended for academic and educational purposes.
