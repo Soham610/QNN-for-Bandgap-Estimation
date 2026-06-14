@@ -16,6 +16,14 @@ The objective of this project is to develop a hybrid neural network capable of e
 
 ⸻
 
+
+## Key Achievements
+
+- Developed a Quantum-Inspired Hybrid Neural Network for material bandgap prediction.
+- Achieved R² scores above 0.90 on test data.
+- Applied feature engineering and ensemble learning techniques to improve prediction accuracy.
+- Built using PyTorch and Scikit-learn.
+
 Key Features
 
 * Quantum-inspired neural network architecture
